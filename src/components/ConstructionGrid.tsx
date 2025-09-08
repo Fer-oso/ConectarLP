@@ -12,7 +12,7 @@ const ConstructionGrid: React.FC<ConstructionGridProps>=({onOpenModal,onScrollTo
     return(
         <div className="hero-grid">
               <div className="hero-left space-y-5">
-                <div className="urgency" aria-label="Oferta especial de lanzamiento">🎯 Lanzamiento: primeras campañas la semana que viene — sumate ahora</div>
+                <div className="urgency " aria-label="Oferta especial de lanzamiento">🎯 Lanzamiento: primeras campañas la semana que viene — sumate ahora</div>
                 <h1 id="hero-heading" className='text-4xl sm:text-5xl font-extrabold'>Transformá tu contenido en oportunidades reales de negocio</h1>
                 <p className="lead">Conectar es la plataforma que une profesionales y clientes del rubro construcción. Publicamos tu contenido como colaboración y te exponemos frente a una audiencia segmentada y real, sin costos ocultos.</p>
                   

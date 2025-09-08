@@ -269,7 +269,7 @@ function App() {
           </div>
         </Section>
 
-        <Section
+       {/* <Section
           id="colabora"
           title="¿Listo para unirte?"
           subtitle="Aplicá ahora y empezá a monetizar tu contenido con las mejores marcas"
@@ -301,7 +301,7 @@ function App() {
               </p>
             </div>
           </div>
-        </Section>
+        </Section>*/}
       </main>
 
       <Footer onOpenInstagram={openInstagram} onDownloadGuide={downloadGuide} />
