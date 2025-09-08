@@ -85,7 +85,7 @@ function App() {
           onOpenInstagram={openInstagram}
         />
 
-        <Section id="que-es" title="" subtitle="">
+        <Section id="que-es" title="" >
           <div className="section-flex">
             <div className="text-content appear">
               <h2 className="">¿Qué es Conectar?</h2>
@@ -136,6 +136,7 @@ function App() {
           id="como-funciona"
           title="¿Cómo funciona?"
           subtitle="En 4 simples pasos comenzás a recibir leads calificados"
+          className=" bg-[radial-gradient(circle,rgba(39,211,169,0.1)_0%,transparent_50%)]"
         >
           <div className="steps">
             <div className="step appear">
@@ -172,6 +173,7 @@ function App() {
           id="beneficios"
           title="¿Por qué elegir Conectar?"
           subtitle="Los beneficios que solo nuestra comunidad exclusiva puede ofrecerte"
+             className=" bg-[radial-gradient(circle,rgba(39,211,169,0.1)_0%,transparent_50%)] "
         >
           <div className="benefits">
             <div className="benefits-visual appear">
