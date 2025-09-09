@@ -1,26 +1,9 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Play,
-  Users,
-  TrendingUp,
-  Award,
 } from "lucide-react";
-
-interface SlideData {
-  id: number;
-  title: string;
-  subtitle: string;
-  description: string;
-  image: string;
-  stats?: {
-    icon: React.ReactNode;
-    value: string;
-    label: string;
-  }[];
-  cta?: string;
-}
+import { slides } from "../data/mockupSlideData";
 
 interface ConstructionSliderProps {
   onScrollToForm: () => void;
@@ -35,58 +18,6 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
 }) => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
-
-  const slides: SlideData[] = [
-    {
-      id: 1,
-      title: "Conectá con profesionales de la construcción",
-      subtitle: "Plataforma líder en el sector",
-      description:
-        "Más de 1,250 profesionales confían en nuestra plataforma para generar leads calificados y hacer crecer sus negocios.",
-      image:
-        "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      stats: [
-        { icon: <Users size={20} />, value: "1,250+", label: "Profesionales" },
-        { icon: <TrendingUp size={20} />, value: "85%", label: "Más leads" },
-        { icon: <Award size={20} />, value: "4.8★", label: "Valoración" },
-      ],
-      cta: "Únete ahora",
-    },
-    {
-      id: 2,
-      title: "Proyectos que transforman espacios",
-      subtitle: "Inspiración y resultados reales",
-      description:
-        "Descubrí cómo nuestros colaboradores han transformado espacios y generado oportunidades de negocio exitosas.",
-      image:
-        "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      stats: [
-        { icon: <Play size={20} />, value: "500+", label: "Proyectos" },
-        {
-          icon: <TrendingUp size={20} />,
-          value: "120%",
-          label: "ROI promedio",
-        },
-        { icon: <Users size={20} />, value: "2,800", label: "Clientes" },
-      ],
-      cta: "Ver proyectos",
-    },
-    {
-      id: 3,
-      title: "Herramientas y materiales de calidad",
-      subtitle: "Proveedores verificados",
-      description:
-        "Conectamos con los mejores proveedores del sector. Materiales de calidad, precios competitivos y entregas puntuales.",
-      image:
-        "https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-      stats: [
-        { icon: <Award size={20} />, value: "150+", label: "Proveedores" },
-        { icon: <TrendingUp size={20} />, value: "98%", label: "Satisfacción" },
-        { icon: <Users size={20} />, value: "24/7", label: "Soporte" },
-      ],
-      cta: "Explorar catálogo",
-    },
-  ];
 
   // Auto-play functionality
   useEffect(() => {
@@ -122,7 +53,7 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
     <>
       {/* Slider como elemento principal */}
       <div className="hero-slider-section">
-        <div className="construction-slider">
+        <div className="construction-slider ">
           <div className="slider-container">
             <div
               className="slides-wrapper"
@@ -130,8 +61,10 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
             >
               {slides.map((slide, index) => (
                 <div key={slide.id} className="slide">
-                  <div className="slide-content">
-                    <div className="slide-text">
+                  <div className={`slide-content ${slide.type === "informational" ? "grid-cols-2" :""}`}>
+
+          { slide.type === "informational" && (   
+             <div className="slide-text">
                       <div className="slide-badge">{slide.subtitle}</div>
                       <h2 className="slide-title">{slide.title}</h2>
                       <p className="slide-description">{slide.description}</p>
@@ -150,13 +83,18 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
                         </div>
                       )}
                     </div>
+                  )}
 
-                    <div className="slide-image">
-                      <img
-                        src={slide.image}
-                        alt={slide.title}
-                        loading={index === 0 ? "eager" : "lazy"}
-                      />
+                    <div className={`${slide.type === "informational" ? "slide-image" : ""} `}>
+                  <picture>
+  <source srcSet={slide.image.mobile} media="(max-width: 1024px)" />
+  <source srcSet={slide.image.desktop} media="(max-width: 1200px)" />
+  <img
+    src={slide.image.desktop} // imagen por defecto (desktop)
+    alt={slide.title}
+    loading={index === 0 ? "eager" : "lazy"}
+  />
+</picture>
                       <div className="image-overlay"></div>
                     </div>
                   </div>

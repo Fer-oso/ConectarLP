@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { FaInstagram, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
@@ -53,10 +53,12 @@ const Header: React.FC<HeaderProps> = ({  onOpenModal }) => {
     <>
       <header 
         id="main-header" 
-        className={isScrolled ? 'scrolled' : ''}
+        className={`${isScrolled ? 'scrolled' : ''}`}
         onKeyDown={handleKeyDown}
       >
-        <div className="logo-row">
+        <div className='flex justify-between items-center mx-auto w-[1350px]'>  
+          
+          <div className="logo-row">
           <img src="/logo2.png" alt="Conectar Logo" />
         </div>
         <nav className="desktop-nav ">
@@ -102,7 +104,8 @@ const Header: React.FC<HeaderProps> = ({  onOpenModal }) => {
           <a href="#beneficios">Beneficios</a>
           <a href="#testimonios">Testimonios</a>
           <a href="#colabora">Colaborá</a>
-        </nav>
+        </nav></div>
+      
       </header>
     </>
   );

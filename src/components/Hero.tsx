@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import  { useEffect, useRef, useState } from 'react';
 
 import ConstructionSlider from './ConstructionSlider';
 import ConstructionGrid from './ConstructionGrid';
@@ -54,15 +54,21 @@ const Hero: React.FC<HeroProps> = ({ onScrollToForm, onOpenModal, onOpenInstagra
  
   return (
    <section className="hero" id="inicio" aria-labelledby="hero-heading">
-    <button onClick={()=>setChangeView(!changeView)}><EyeIcon /></button>
+ 
+ <ConstructionSlider onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
+
+{/*
+   <button onClick={()=>setChangeView(!changeView)}><EyeIcon /></button>
     {changeView ? <>
     
-    <ConstructionGrid onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
+         <ConstructionSlider onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
+
     </> : <>
-      <ConstructionSlider onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
+     <ConstructionGrid onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
     </>
     
     }
+*/}
     </section>
   );
 };

@@ -75,7 +75,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen flex flex-col">
       <Header onScrollToForm={scrollToForm} onOpenModal={openCollabModal} />
 
       <main>

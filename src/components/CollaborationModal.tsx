@@ -102,8 +102,8 @@ const CollaborationModal: React.FC<CollaborationModalProps> = ({ isOpen, onClose
     try {
       // Simulate API call
       await new Promise(resolve => setTimeout(resolve, 2000));
-      const text = `Hola, soy ${formData.name}. Mi correo es ${formData.email}. Mensaje: ${formData.message}`;
-    const url = `https://wa.me/${"1130586473"}?text=${encodeURIComponent(text)}`;
+      const text = `Hola, soy ${formData.name}. Mi correo es ${formData.email}, mi telefono es ${formData.phone}. Mi Instagram es ${formData.insta}. Mi link de referencia es ${formData.link}. ${formData.message ? `Ademas, quiero agregar: ${formData.message}` : ''}`;
+    const url = `https://wa.me/${"+541130586473"}?text=${encodeURIComponent(text)}`;
    
       setShowThanks(true);
          setTimeout(() => {
