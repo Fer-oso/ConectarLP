@@ -75,7 +75,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col">
+    <div className="min-h-screen mx-auto flex flex-col justify-center items-center ">
       <Header onScrollToForm={scrollToForm} onOpenModal={openCollabModal} />
 
       <main>
@@ -85,7 +85,7 @@ function App() {
           onOpenInstagram={openInstagram}
         />
 
-        <Section id="que-es" title="" >
+        <Section id="que-es" title="">
           <div className="section-flex">
             <div className="text-content appear">
               <h2 className="">¿Qué es Conectar?</h2>
@@ -173,7 +173,7 @@ function App() {
           id="beneficios"
           title="¿Por qué elegir Conectar?"
           subtitle="Los beneficios que solo nuestra comunidad exclusiva puede ofrecerte"
-             className=" bg-[radial-gradient(circle,rgba(39,211,169,0.1)_0%,transparent_50%)] "
+          className=" bg-[radial-gradient(circle,rgba(39,211,169,0.1)_0%,transparent_50%)] "
         >
           <div className="benefits">
             <div className="benefits-visual appear">
@@ -187,21 +187,24 @@ function App() {
                 <div className="badge">💎 Premium</div>
                 <h4>Audiencia segmentada del sector construcción</h4>
                 <p>
-                  Llegá a profesionales, contratistas y clientes reales interesados en tus servicios.
+                  Llegá a profesionales, contratistas y clientes reales
+                  interesados en tus servicios.
                 </p>
               </div>
               <div className="benefit-item appear">
                 <div className="badge">🚀 Growth</div>
                 <h4>Posicionamiento como experto</h4>
                 <p>
-                  Tu contenido educa e inspira, estableciendo tu autoridad en el rubro.
+                  Tu contenido educa e inspira, estableciendo tu autoridad en el
+                  rubro.
                 </p>
               </div>
               <div className="benefit-item appear">
                 <div className="badge">🤝 Support</div>
                 <h4>Pagás solo por resultados</h4>
                 <p>
-                  No hay suscripciones ni cargos fijos. Solo invertís cuando obtenés leads reales.
+                  No hay suscripciones ni cargos fijos. Solo invertís cuando
+                  obtenés leads reales.
                 </p>
               </div>
               <div className="benefit-item appear">
@@ -233,7 +236,8 @@ function App() {
                 </div>
               </div>
               <div className="testimonial-content">
-              Gracias a Conectar conseguí 3 clientes nuevos en el primer mes. La audiencia es realmente del rubro y con intención de compra."
+                Gracias a Conectar conseguí 3 clientes nuevos en el primer mes.
+                La audiencia es realmente del rubro y con intención de compra."
               </div>
             </div>
 
@@ -248,7 +252,8 @@ function App() {
                 </div>
               </div>
               <div className="testimonial-content">
-                La mejor inversión en marketing que hice este año. Las colaboraciones me dieron visibilidad frente a clientes ideales.
+                La mejor inversión en marketing que hice este año. Las
+                colaboraciones me dieron visibilidad frente a clientes ideales.
               </div>
             </div>
 
@@ -263,45 +268,12 @@ function App() {
                 </div>
               </div>
               <div className="testimonial-content">
-                Finalmente una plataforma que entiende las necesidades de nuestro sector. El proceso es simple y los resultados tangibles.
+                Finalmente una plataforma que entiende las necesidades de
+                nuestro sector. El proceso es simple y los resultados tangibles.
               </div>
             </div>
           </div>
         </Section>
-
-       {/* <Section
-          id="colabora"
-          title="¿Listo para unirte?"
-          subtitle="Aplicá ahora y empezá a monetizar tu contenido con las mejores marcas"
-        >
-          <div className="text-center">
-            <div className="form-card appear">
-              <h3>Requisitos para aplicar</h3>
-              <div
-                className="requirements-list"
-                style={{ textAlign: "left", marginBottom: "2rem" }}
-              >
-                <p>✅ Mínimo 10K seguidores en Instagram</p>
-                <p>✅ Contenido original y de calidad</p>
-                <p>✅ Engagement rate superior al 3%</p>
-                <p>✅ Perfil público y activo</p>
-                <p>✅ Residir en Argentina</p>
-              </div>
-              <button className="btn-primary" onClick={openCollabModal}>
-                Aplicar a Conectar
-              </button>
-              <p
-                style={{
-                  marginTop: "1rem",
-                  fontSize: "0.9rem",
-                  color: "var(--text-muted)",
-                }}
-              >
-                El proceso de selección toma 48-72 horas
-              </p>
-            </div>
-          </div>
-        </Section>*/}
       </main>
 
       <Footer onOpenInstagram={openInstagram} onDownloadGuide={downloadGuide} />

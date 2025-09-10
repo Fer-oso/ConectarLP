@@ -1,8 +1,5 @@
 import { useState, useEffect } from "react";
-import {
-  ChevronLeft,
-  ChevronRight,
-} from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { slides } from "../data/mockupSlideData";
 
 interface ConstructionSliderProps {
@@ -61,40 +58,53 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
             >
               {slides.map((slide, index) => (
                 <div key={slide.id} className="slide">
-                  <div className={`slide-content ${slide.type === "informational" ? "grid-cols-2" :""}`}>
+                  <div
+                    className={`slide-content ${
+                      slide.type === "informational" ? "grid-cols-2" : ""
+                    }`}
+                  >
+                    {slide.type === "informational" && (
+                      <div className="slide-text">
+                        <div className="slide-badge">{slide.subtitle}</div>
+                        <h2 className="slide-title">{slide.title}</h2>
+                        <p className="slide-description">{slide.description}</p>
 
-          { slide.type === "informational" && (   
-             <div className="slide-text">
-                      <div className="slide-badge">{slide.subtitle}</div>
-                      <h2 className="slide-title">{slide.title}</h2>
-                      <p className="slide-description">{slide.description}</p>
-
-                      {slide.stats && (
-                        <div className="slide-stats">
-                          {slide.stats.map((stat, statIndex) => (
-                            <div key={statIndex} className="stat-item">
-                              <div className="stat-icon">{stat.icon}</div>
-                              <div className="stat-content">
-                                <div className="stat-value">{stat.value}</div>
-                                <div className="stat-label">{stat.label}</div>
+                        {slide.stats && (
+                          <div className="slide-stats">
+                            {slide.stats.map((stat, statIndex) => (
+                              <div key={statIndex} className="stat-item">
+                                <div className="stat-icon">{stat.icon}</div>
+                                <div className="stat-content">
+                                  <div className="stat-value">{stat.value}</div>
+                                  <div className="stat-label">{stat.label}</div>
+                                </div>
                               </div>
-                            </div>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  )}
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    )}
 
-                    <div className={`${slide.type === "informational" ? "slide-image" : ""} `}>
-                  <picture>
-  <source srcSet={slide.image.mobile} media="(max-width: 1024px)" />
-  <source srcSet={slide.image.desktop} media="(max-width: 1200px)" />
-  <img
-    src={slide.image.desktop} // imagen por defecto (desktop)
-    alt={slide.title}
-    loading={index === 0 ? "eager" : "lazy"}
-  />
-</picture>
+                    <div
+                      className={`${
+                        slide.type === "informational" ? "slide-image" : ""
+                      } `}
+                    >
+                      <picture>
+                        <source
+                          srcSet={slide.image.mobile}
+                          media="(max-width: 1024px)"
+                        />
+                        <source
+                          srcSet={slide.image.desktop}
+                          media="(max-width: 1200px)"
+                        />
+                        <img
+                          src={slide.image.desktop} // imagen por defecto (desktop)
+                          alt={slide.title}
+                          loading={index === 0 ? "eager" : "lazy"}
+                        />
+                      </picture>
                       <div className="image-overlay"></div>
                     </div>
                   </div>
@@ -154,7 +164,10 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
               Conectá con marcas que buscan tu talento
             </h1>
             <p className="lead mx-auto">
-              Conectar es la plataforma que une profesionales y clientes del rubro construcción. Publicamos tu contenido como colaboración y te exponemos frente a una audiencia segmentada y real, sin costos ocultos.
+              Conectar es la plataforma que une profesionales y clientes del
+              rubro construcción. Publicamos tu contenido como colaboración y te
+              exponemos frente a una audiencia segmentada y real, sin costos
+              ocultos.
             </p>
 
             <div className="hero-cta justify-center">
