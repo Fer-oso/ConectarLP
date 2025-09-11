@@ -1,0 +1,39 @@
+/* Navegación desktop */
+.desktop-nav ul {
+  display: flex;
+  gap: 1.125rem;
+  list-style: none;
+}
+
+.desktop-nav a {
+  font-weight: 600;
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  padding: 0.5rem 0.625rem;
+  border-radius: var(--radius-sm);
+  transition: all var(--transition-fast);
+  position: relative;
+}
+
+.desktop-nav a:hover,
+.desktop-nav a:focus {
+  color: var(--text-primary);
+  background: var(--bg-glass);
+}
+
+.desktop-nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--gold);
+  transition: all var(--transition-normal);
+  transform: translateX(-50%);
+}
+
+.desktop-nav a:hover::after,
+.desktop-nav a:focus::after {
+  width: 30%;
+}

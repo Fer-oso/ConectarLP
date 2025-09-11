@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 
-import ConstructionSlider from "./ConstructionSlider";
-import ConstructionGrid from "./ConstructionGrid";
-import { EyeIcon } from "lucide-react";
+import ConstructionSlider from "../slider/ConstructionSlider";
+
+import "./styles/HeroStyles.css";
 
 interface HeroProps {
   onScrollToForm: () => void;
@@ -60,7 +60,11 @@ const Hero: React.FC<HeroProps> = ({
   }, []);
 
   return (
-    <section className="hero " id="inicio" aria-labelledby="hero-heading">
+    <section
+      className="hero flex flex-col items-center justify-center relative overflow-hidden gap-3 w-[1280px] "
+      id="inicio"
+      aria-labelledby="hero-heading"
+    >
       <ConstructionSlider
         onOpenModal={onOpenModal}
         onScrollToForm={onScrollToForm}

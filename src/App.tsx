@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Header from "./components/Header";
-import Hero from "./components/Hero";
+import Header from "./components/header/Header";
+import Hero from "./components/hero/Hero";
 import Section from "./components/Section";
 import StickyBanner from "./components/StickyBanner";
 import CollaborationModal from "./components/CollaborationModal";
@@ -75,7 +75,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen mx-auto flex flex-col justify-center items-center ">
+    <div className="min-h-screen mx-auto flex flex-col justify-center items-center w-[1280px] ">
       <Header onScrollToForm={scrollToForm} onOpenModal={openCollabModal} />
 
       <main>

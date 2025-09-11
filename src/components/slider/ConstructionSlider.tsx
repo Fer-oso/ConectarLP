@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { slides } from "../data/mockupSlideData";
+import { slides } from "../../data/mockupSlideData";
+
+import "./styles/ConstructionSliderStyles.css";
 
 interface ConstructionSliderProps {
   onScrollToForm: () => void;
@@ -49,9 +51,9 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
   return (
     <>
       {/* Slider como elemento principal */}
-      <div className="hero-slider-section">
-        <div className="construction-slider ">
-          <div className="slider-container">
+      <>
+        <div className=" w-full h-[378px] xl:h-[357px] lg:h-auto relative construction-slider">
+          <div className="h-full relative slider-container">
             <div
               className="slides-wrapper"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -190,7 +192,7 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
             </p>
           </div>
         </div>
-      </div>
+      </>
     </>
   );
 };
