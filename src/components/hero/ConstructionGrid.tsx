@@ -15,7 +15,7 @@ const ConstructionGrid: React.FC<ConstructionGridProps> = ({
   onScrollToForm,
 }) => {
   const [instagramModal, setInstagramModal] = useState({
-    isOpen: true,
+    isOpen: false,
     videoUrl: "",
     title: "",
     description: "",
