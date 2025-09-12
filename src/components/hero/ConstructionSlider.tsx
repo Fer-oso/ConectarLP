@@ -6,15 +6,11 @@ import "./styles/ConstructionSliderStyles.css";
 
 interface ConstructionSliderProps {
   onScrollToForm: () => void;
-  onOpenModal: () => void;
+  openCollabModal: () => void;
   counterRef: any;
 }
 
-const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
-  onOpenModal,
-  onScrollToForm,
-  counterRef,
-}) => {
+const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
   const [isAutoPlaying, setIsAutoPlaying] = useState(false);
 
@@ -154,42 +150,6 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = ({
                 }}
               />
             </div>
-          </div>
-        </div>
-
-        {/* Contenido de texto debajo del slider */}
-        <div className="hero-content-section">
-          <div className="hero-content-wrapper">
-            <div className="urgency">🔥 Últimas 48 horas para aplicar</div>
-
-            <h1 className="text-4xl font-bold m-auto">
-              Conectá con marcas que buscan tu talento
-            </h1>
-            <p className="lead mx-auto">
-              Conectar es la plataforma que une profesionales y clientes del
-              rubro construcción. Publicamos tu contenido como colaboración y te
-              exponemos frente a una audiencia segmentada y real, sin costos
-              ocultos.
-            </p>
-
-            <div className="hero-cta justify-center">
-              <button className="btn-primary" onClick={onOpenModal}>
-                Aplicar ahora
-              </button>
-              <button className="btn-secondary" onClick={onScrollToForm}>
-                Ver requisitos
-              </button>
-            </div>
-
-            <p className="small-note m-auto">
-              Ya somos{" "}
-              <strong>
-                <span id="counter" ref={counterRef}>
-                  2847
-                </span>
-              </strong>{" "}
-              creadores conectando con marcas. ¿Te sumás?
-            </p>
           </div>
         </div>
       </>

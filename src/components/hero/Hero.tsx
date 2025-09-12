@@ -1,18 +1,18 @@
 import { useEffect, useRef, useState } from "react";
 
-import ConstructionSlider from "../slider/ConstructionSlider";
+import ConstructionSlider from "./ConstructionSlider";
 
 import "./styles/HeroStyles.css";
 
 interface HeroProps {
   onScrollToForm: () => void;
-  onOpenModal: () => void;
+  openCollabModal: () => void;
   onOpenInstagram: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({
   onScrollToForm,
-  onOpenModal,
+  openCollabModal,
   onOpenInstagram,
 }) => {
   const counterRef = useRef<HTMLSpanElement>(null);
@@ -66,7 +66,7 @@ const Hero: React.FC<HeroProps> = ({
       aria-labelledby="hero-heading"
     >
       <ConstructionSlider
-        onOpenModal={onOpenModal}
+        openCollabModal={openCollabModal}
         onScrollToForm={onScrollToForm}
         counterRef={counterRef}
       />

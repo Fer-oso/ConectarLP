@@ -4,18 +4,12 @@ import Hero from "./components/hero/Hero";
 import Section from "./components/Section";
 import StickyBanner from "./components/StickyBanner";
 import CollaborationModal from "./components/CollaborationModal";
-import InstagramModal from "./components/InstagramModal";
 import Footer from "./components/Footer";
 import "./App.css";
+import ConstructionGrid from "./components/hero/ConstructionGrid";
 
 function App() {
   const [isCollabModalOpen, setIsCollabModalOpen] = useState(false);
-  const [instagramModal, setInstagramModal] = useState({
-    isOpen: false,
-    videoUrl: "",
-    title: "",
-    description: "",
-  });
 
   const scrollToForm = () => {
     const formSection = document.getElementById("colabora");
@@ -38,23 +32,6 @@ function App() {
 
   const closeCollabModal = () => {
     setIsCollabModalOpen(false);
-  };
-
-  const openInstagramModal = (
-    videoUrl: string,
-    title: string,
-    description: string
-  ) => {
-    setInstagramModal({
-      isOpen: true,
-      videoUrl,
-      title,
-      description,
-    });
-  };
-
-  const closeInstagramModal = () => {
-    setInstagramModal((prev) => ({ ...prev, isOpen: false }));
   };
 
   const downloadGuide = () => {
@@ -81,8 +58,13 @@ function App() {
       <main>
         <Hero
           onScrollToForm={scrollToForm}
-          onOpenModal={openCollabModal}
+          openCollabModal={openCollabModal}
           onOpenInstagram={openInstagram}
+        />
+
+        <ConstructionGrid
+          openCollabModal={openCollabModal}
+          onScrollToForm={scrollToForm}
         />
 
         <Section id="que-es" title="">
@@ -283,14 +265,6 @@ function App() {
       <CollaborationModal
         isOpen={isCollabModalOpen}
         onClose={closeCollabModal}
-      />
-
-      <InstagramModal
-        isOpen={instagramModal.isOpen}
-        onClose={closeInstagramModal}
-        videoUrl={instagramModal.videoUrl}
-        title={instagramModal.title}
-        description={instagramModal.description}
       />
     </div>
   );

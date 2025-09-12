@@ -90,6 +90,10 @@ a:focus {
   color: var(--accent1);
 }
 
+p {
+  color: var(--text-secondary);
+}
+
 img,
 picture,
 video,
@@ -192,6 +196,17 @@ select {
 .btn-secondary:focus {
   transform: translateY(-2px);
   box-shadow: 0 12px 35px rgba(33, 150, 243, 0.18);
+}
+
+.urgency {
+  background: linear-gradient(90deg, var(--accent1) 10%, var(--accent2) 90%);
+  color: var(--bg-primary);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  font-weight: 800;
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  animation: pulse 2s infinite;
 }
 
 /* Responsive design for slider */
@@ -410,34 +425,10 @@ select {
   }
 }
 
-.hero-left {
-  padding: 1rem 1rem 1.5rem;
-}
-
 h1 {
   margin-bottom: 0.875rem;
   color: var(--gold);
   letter-spacing: -0.5px;
-}
-
-.lead {
-  color: var(--text-secondary);
-  font-size: 1.15rem;
-  margin-bottom: 1.5rem;
-  max-width: 90%;
-}
-
-.hero-cta {
-  display: flex;
-  gap: 0.875rem;
-  flex-wrap: wrap;
-  margin-bottom: 1.25rem;
-}
-
-.small-note {
-  color: var(--text-muted);
-  font-size: 0.86rem;
-  max-width: 90%;
 }
 
 /* Mockup mejorado */
@@ -544,18 +535,6 @@ h1 {
 .post .meta p {
   color: var(--text-secondary);
   font-size: 0.85rem;
-}
-
-/* Urgency band mejorada */
-.urgency {
-  background: linear-gradient(90deg, var(--accent1) 10%, var(--accent2) 90%);
-  color: var(--bg-primary);
-  padding: 0.75rem 1rem;
-  border-radius: var(--radius-md);
-  font-weight: 800;
-  display: inline-block;
-  margin-bottom: 1.25rem;
-  animation: pulse 2s infinite;
 }
 
 @keyframes pulse {
@@ -1446,11 +1425,6 @@ footer p {
     font-size: 2.4rem;
   }
 
-  .lead,
-  .small-note {
-    max-width: 100%;
-  }
-
   .section-flex {
     flex-direction: column;
     text-align: center;
@@ -1484,13 +1458,6 @@ footer p {
 
   .header-actions .btn-ghost {
     display: none;
-  }
-
-  .hero-cta {
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 0.75rem;
   }
 }
 
@@ -1574,26 +1541,6 @@ footer p {
   .hero {
     padding: 5rem 1rem 2.5rem;
     min-height: auto;
-  }
-
-  .lead {
-    font-size: 1.05rem;
-  }
-
-  .small-note {
-    font-size: 0.8rem;
-  }
-
-  .hero-cta {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.75rem;
-  }
-
-  .hero-cta button {
-    width: 100%;
-    text-align: center;
-    padding: 0.875rem 1.5rem;
   }
 
   .testimonials {
@@ -1690,23 +1637,6 @@ footer p {
 
   .hero {
     padding: 4.5rem 0.75rem 2rem;
-  }
-
-  .hero-left {
-    padding: 0.5rem;
-  }
-
-  .urgency {
-    font-size: 0.85rem;
-    padding: 0.625rem 0.875rem;
-  }
-
-  .lead {
-    font-size: 1rem;
-  }
-
-  .small-note {
-    font-size: 0.75rem;
   }
 
   .section {
@@ -1962,11 +1892,6 @@ img {
 
 /* Mejorar el espaciado en pantallas muy grandes */
 @media (min-width: 1600px) {
-  .hero-grid,
-  main {
-    max-width: 1400px;
-  }
-
   .section {
     padding: 4rem 2rem;
   }
