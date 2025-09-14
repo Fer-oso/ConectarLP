@@ -36,10 +36,10 @@ const ConstructionGrid: React.FC<ConstructionGridProps> = ({
   return (
     <div className="hero-grid">
       <div className="hero-left space-y-5">
-        <div className="urgency" aria-label="Oferta especial de lanzamiento">
+        <div className="urgency flex justify-center w-[90%]" aria-label="Oferta especial de lanzamiento">
           🎯 Lanzamiento: primeras campañas la semana que viene — sumate ahora
         </div>
-        <h1 id="hero-heading" className="text-4xl sm:text-5xl font-extrabold">
+        <h1 id="hero-heading" className="text-4xl sm:text-3xl font-extrabold">
           Transformá tu contenido en oportunidades reales de negocio
         </h1>
         <p className="lead">

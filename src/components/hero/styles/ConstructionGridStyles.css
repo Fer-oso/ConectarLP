@@ -45,6 +45,12 @@
     order: 1;
   }
 
+  .lead{
+    font-size: 15px;
+    font-weight: bold;
+    width: 100%;
+  }
+
   .lead,
   .small-note {
     max-width: 100%;
@@ -56,6 +62,10 @@
     justify-content: center;
     gap: 0.75rem;
   }
+
+  .urgency {
+    margin: auto;
+}
 }
 
 @media (max-width: 768px) {

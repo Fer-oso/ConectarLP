@@ -48,8 +48,8 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
     <>
       {/* Slider como elemento principal */}
       <>
-        <div className=" w-full h-[378px] xl:h-[357px] lg:h-auto relative construction-slider">
-          <div className="h-full relative slider-container">
+        <div className="construction-slider">
+          <div className="slider-container">
             <div
               className="slides-wrapper"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -85,13 +85,33 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
 
                     <div
                       className={`${
-                        slide.type === "informational" ? "slide-image" : ""
+                        slide.type === "informational"
+                          ? "slide-image"
+                          : "h-full"
                       } `}
                     >
                       <picture>
                         <source
                           srcSet={slide.image.mobile}
+                          media="(max-width: 425px)"
+                        />
+
+                        <source
+                          srcSet={slide.image.tablet}
+                          media="(max-width: 768px)"
+                        />
+
+                        <source
+                          srcSet={slide.image.laptop}
+                          media="(max-width: 906px)"
+                        />
+                        <source
+                          srcSet={slide.image.laptop}
                           media="(max-width: 1024px)"
+                        />
+                        <source
+                          srcSet={slide.image.laptop}
+                          media="(max-width: 1100px)"
                         />
                         <source
                           srcSet={slide.image.desktop}

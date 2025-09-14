@@ -59,7 +59,7 @@ function App() {
         <Hero
           onScrollToForm={scrollToForm}
           openCollabModal={openCollabModal}
-          onOpenInstagram={openInstagram}
+        
         />
 
         <ConstructionGrid

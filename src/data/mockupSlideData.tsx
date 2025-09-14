@@ -7,6 +7,8 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
   description: string;
   image: {
     desktop: string;
+    laptop:string;
+    tablet:string;
     mobile: string;
   };
   stats?: {
@@ -26,8 +28,10 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Más de 1,250 profesionales confían en nuestra plataforma para generar leads calificados y hacer crecer sus negocios.",
       image:
-        { desktop: "./sliderimages/slideimg1.webp",
-          mobile: "./sliderimages/slideimg1mobile.gif"
+        { desktop: "./sliderimages/imagen-1380x500.png",
+          laptop:"./sliderimages/imagen-1380x500.png",
+          tablet:"./sliderimages/imagen-1380x500.png",
+          mobile: "./sliderimages/imagen-480x400.png"
         },
       stats: [
         { icon: <Users size={20} />, value: "1,250+", label: "Profesionales" },
@@ -44,8 +48,10 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Descubrí cómo nuestros colaboradores han transformado espacios y generado oportunidades de negocio exitosas.",
       image:
-        { desktop: "./sliderimages/slideimg2.webp",
-          mobile: "./sliderimages/slideimg2mobile.webp"
+        { desktop: "./sliderimages/imagen-1380x500.png",
+             laptop:"./sliderimages/imagen-1380x500.png",
+               tablet:"./sliderimages/imagen-1380x500.png",
+          mobile: "./sliderimages/imagen-480x400.png"
         },
       stats: [
         { icon: <Play size={20} />, value: "500+", label: "Proyectos" },
@@ -66,7 +72,9 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Conectamos con los mejores proveedores del sector. Materiales de calidad, precios competitivos y entregas puntuales.",
       image:
-         { desktop: "./sliderimages/slideimg3.webp",
+         { desktop: "./sliderimages/imagen-1380x500.png",
+             laptop:"./sliderimages/imagen-1380x500.png",
+               tablet:"./sliderimages/imagen-1380x500.png",
           mobile: "./sliderimages/slideimg3mobile.webp"
         },
       stats: [
@@ -85,8 +93,10 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Más de 1,250 profesionales confían en nuestra plataforma para generar leads calificados y hacer crecer sus negocios.",
       image:{
-        desktop:"https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        mobile:" https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+        desktop:" ./sliderimages/imagen-480x400.png",
+           laptop:" ./sliderimages/imagen-480x400.png",
+           tablet:" ./sliderimages/imagen-480x400.png",
+        mobile:" ./sliderimages/imagen-480x400.png"
       },
       
       stats: [
@@ -104,8 +114,10 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Descubrí cómo nuestros colaboradores han transformado espacios y generado oportunidades de negocio exitosas.",
       image:{
-        desktop:"https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        mobile:"https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
+        desktop:"./sliderimages/imagen-480x400.jpg",
+           laptop:"./sliderimages/imagen-480x400.jpg",
+            tablet:" ./sliderimages/imagen-480x400.png",
+        mobile:"./sliderimages/imagen-480x400.jpg",
       },
 
       stats: [
@@ -127,8 +139,10 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       description:
         "Conectamos con los mejores proveedores del sector. Materiales de calidad, precios competitivos y entregas puntuales.",
       image:{
-        desktop:"https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop",
-        mobile:"https://images.pexels.com/photos/1216589/pexels-photo-1216589.jpeg?auto=compress&cs=tinysrgb&w=600&h=400&fit=crop"
+        desktop:"./sliderimages/imagen2-480x400.jpg",
+        laptop:"./sliderimages/imagen2-480x400.jpg",
+         tablet:" ./sliderimages/imagen-480x400.png",
+        mobile:"./sliderimages/imagen2-480x400.jpg"
       }
         ,
       stats: [

@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 import ConstructionSlider from "./ConstructionSlider";
 
@@ -7,17 +7,13 @@ import "./styles/HeroStyles.css";
 interface HeroProps {
   onScrollToForm: () => void;
   openCollabModal: () => void;
-  onOpenInstagram: () => void;
 }
 
 const Hero: React.FC<HeroProps> = ({
   onScrollToForm,
   openCollabModal,
-  onOpenInstagram,
 }) => {
   const counterRef = useRef<HTMLSpanElement>(null);
-
-  const [changeView, setChangeView] = useState(true);
 
   useEffect(() => {
     const counterEl = counterRef.current;
@@ -71,18 +67,6 @@ const Hero: React.FC<HeroProps> = ({
         counterRef={counterRef}
       />
 
-      {/*
-   <button onClick={()=>setChangeView(!changeView)}><EyeIcon /></button>
-    {changeView ? <>
-    
-         <ConstructionSlider onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
-
-    </> : <>
-     <ConstructionGrid onOpenModal={onOpenModal} onScrollToForm={onScrollToForm} counterRef={counterRef}/>
-    </>
-    
-    }
-*/}
     </section>
   );
 };
