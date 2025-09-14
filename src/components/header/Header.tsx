@@ -4,10 +4,10 @@ import { useMobileMenu } from "../../hooks/useMobileMenu";
 import { useResponsive } from "../../hooks/useResponsive";
 import { DesktopNav } from "./DesktopNav";
 import { MenuMobile } from "./MenuMobile";
-
-import "./styles/HeaderStyles.css";
 import { ButtonGhost } from "../buttons/ButtonGhost";
 import { Button } from "../buttons/Button";
+
+import "./styles/HeaderStyles.css";
 
 interface HeaderProps {
   onScrollToForm: () => void;
@@ -30,7 +30,7 @@ const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
     <>
       <header
         id="main-header"
-        className={` ${isScrolled ? "scrolled" : ""}  `}
+        className={` ${isScrolled ? "scrolled" : ""}`}
         onKeyDown={handleKeyDown}
       >
         <div className="flex justify-between items-center mx-auto w-[1280px]">

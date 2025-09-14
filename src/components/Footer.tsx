@@ -12,7 +12,7 @@ const Footer: React.FC<FooterProps> = ({ onOpenInstagram, onDownloadGuide }) => 
     <footer>
       <div className="footer-content">
         <div className="footer-logo">
-          <img src="/logo.jpg" alt="Conectar"  />
+          <img src="/logo.png" alt="Conectar" className='w-96'  />
     
         </div>
         

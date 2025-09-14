@@ -76,6 +76,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   overflow-x: hidden;
+
 }
 
 /* Mejor contraste y accesibilidad para enlaces */
@@ -392,7 +393,6 @@ h1 {
 main {
   max-width: 100%;
   margin: 0 auto;
-  padding: 2rem;
 }
 
 .section {
@@ -841,7 +841,7 @@ footer {
   color: var(--text-secondary);
   border-top: 1px solid var(--border-dark);
   margin-top: 3rem;
-  background: var(--bg-primary);
+
 }
 
 .footer-content {
