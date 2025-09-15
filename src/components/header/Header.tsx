@@ -33,12 +33,16 @@ const Header: React.FC<HeaderProps> = ({ onOpenModal }) => {
         className={` ${isScrolled ? "scrolled" : ""}`}
         onKeyDown={handleKeyDown}
       >
-        <div className="flex justify-between items-center mx-auto w-[1280px]">
+        <div className="flex justify-between items-center mx-auto w-[1280px] sm:max-w-screen-sm
+        md:max-w-screen-md
+        lg:max-w-screen-lg
+        xl:max-w-screen-xl
+        2xl:max-w-screen-2xl">
           <img src="/logo2.png" alt="Conectar Logo" className="h-12 w-auto" />
 
           <DesktopNav />
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-">
             <ButtonGhost
               className="btn-ghost"
               to="https://www.instagram.com/conectar_construccion/"

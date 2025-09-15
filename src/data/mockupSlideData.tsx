@@ -30,7 +30,7 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       image:
         { desktop: "./sliderimages/imagen-1380x500.png",
           laptop:"./sliderimages/imagen-1380x500.png",
-          tablet:"./sliderimages/imagen-1380x500.png",
+          tablet:"./sliderimages/imagen-1380x700.png",
           mobile: "./sliderimages/imagen-480x400.png"
         },
       stats: [
@@ -50,7 +50,7 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       image:
         { desktop: "./sliderimages/imagen-1380x500.png",
              laptop:"./sliderimages/imagen-1380x500.png",
-               tablet:"./sliderimages/imagen-1380x500.png",
+               tablet:"./sliderimages/imagen-1380x700.png",
           mobile: "./sliderimages/imagen-480x400.png"
         },
       stats: [
@@ -74,7 +74,7 @@ import { Award, Play, TrendingUp, Users } from "lucide-react";
       image:
          { desktop: "./sliderimages/imagen-1380x500.png",
              laptop:"./sliderimages/imagen-1380x500.png",
-               tablet:"./sliderimages/imagen-1380x500.png",
+               tablet:"./sliderimages/imagen-1380x700.png",
           mobile: "./sliderimages/slideimg3mobile.webp"
         },
       stats: [

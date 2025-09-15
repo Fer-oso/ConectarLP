@@ -48,8 +48,8 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
     <>
       {/* Slider como elemento principal */}
       <>
-        <div className="construction-slider">
-          <div className="slider-container">
+        <div className="construction-slider  ">
+          <div className="slider-container ">
             <div
               className="slides-wrapper"
               style={{ transform: `translateX(-${currentSlide * 100}%)` }}
@@ -93,7 +93,7 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
                       <picture>
                         <source
                           srcSet={slide.image.mobile}
-                          media="(max-width: 425px)"
+                          media="(max-width: 526px)"
                         />
 
                         <source
@@ -121,6 +121,7 @@ const ConstructionSlider: React.FC<ConstructionSliderProps> = () => {
                           src={slide.image.desktop} // imagen por defecto (desktop)
                           alt={slide.title}
                           loading={index === 0 ? "eager" : "lazy"}
+                          className=""
                         />
                       </picture>
                       <div className="image-overlay"></div>
